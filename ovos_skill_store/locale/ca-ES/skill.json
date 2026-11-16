@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-store.emkay-voice",
+  "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "name": "Botiga de skills",
+  "description": "Troba i instal·la skills amb la veu, des d'una o més botigues; la pantalla mostra cadascuna amb la seva icona i què li pots dir.",
+  "examples": [
+    "Troba una skill per al temps",
+    "Instal·la la skill d'acudits",
+    "Recomana'm unes skills"
+  ],
+  "icon": "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png",
+  "tags": [
+    "store",
+    "skills",
+    "install",
+    "emkay"
+  ]
+}

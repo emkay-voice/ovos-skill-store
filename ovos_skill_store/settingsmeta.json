@@ -1,0 +1,12 @@
+{
+  "skillMetadata": {
+    "sections": [
+      {
+        "name": "Stores",
+        "fields": [
+          {"name": "stores", "type": "text", "label": "Store URLs, comma-separated", "value": "https://store.emkay.ai/data/skills.json"}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+busca una skill (para|de|sobre) {query}
+hay alguna skill (para|de|sobre) {query}
+busca en la tienda [de skills] {query}
+qué skills hay para {query}

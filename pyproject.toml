@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-store"
+version = "0.1.0a1"
+description = "OpenVoiceOS skill: find and install skills by voice from one or more skill stores, with their icons and example phrases on the screen"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Andreas Lorensen"}]
+requires-python = ">=3.10"
+keywords = ["ovos", "openvoiceos", "skill", "store", "install", "emkay"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "ovos-utils>=0.0.38",
+    "ovos-workshop>=0.0.15,<10.0.0",
+    "requests",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "ovos-bus-client"]
+
+[project.urls]
+Homepage = "https://github.com/emkay-voice/ovos-skill-store"
+Issues = "https://github.com/emkay-voice/ovos-skill-store/issues"
+Emkay = "https://github.com/emkay-voice/emkay"
+Icon = "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png"
+
+[project.entry-points."opm.skill"]
+"ovos-skill-store.emkay-voice" = "ovos_skill_store:StoreSkill"
+
+[tool.setuptools]
+packages = ["ovos_skill_store"]
+
+
+[tool.setuptools.package-data]
+ovos_skill_store = ["locale/**/*", "settingsmeta.json"]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+testpaths = ["tests"]

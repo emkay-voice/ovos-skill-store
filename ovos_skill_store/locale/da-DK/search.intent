@@ -1,0 +1,5 @@
+find en skill (til|om|der) {query}
+er der en skill (til|om|der) {query}
+søg i [skill] (butikken|storen) efter {query}
+hvilke skills (er der|har du) til {query}
+led efter en skill (til|om) {query}

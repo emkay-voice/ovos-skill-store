@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-store.emkay-voice",
+  "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "name": "Boutique de skills",
+  "description": "Trouver et installer des skills à la voix, depuis une ou plusieurs boutiques ; l'écran montre chacune avec son icône et ce qu'on peut lui dire.",
+  "examples": [
+    "Trouve une skill pour la météo",
+    "Installe la skill des blagues",
+    "Recommande-moi des skills"
+  ],
+  "icon": "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png",
+  "tags": [
+    "store",
+    "skills",
+    "install",
+    "emkay"
+  ]
+}

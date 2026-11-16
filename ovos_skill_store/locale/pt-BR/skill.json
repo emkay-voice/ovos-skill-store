@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-store.emkay-voice",
+  "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "name": "Loja de skills",
+  "description": "Encontre e instale skills com a voz, de uma ou mais lojas; a tela mostra cada uma com seu ícone e o que você pode dizer a ela.",
+  "examples": [
+    "Encontre uma skill para o tempo",
+    "Instale a skill de piadas",
+    "Recomende algumas skills"
+  ],
+  "icon": "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png",
+  "tags": [
+    "store",
+    "skills",
+    "install",
+    "emkay"
+  ]
+}

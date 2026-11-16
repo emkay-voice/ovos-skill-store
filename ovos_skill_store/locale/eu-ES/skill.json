@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-store.emkay-voice",
+  "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "name": "Skill denda",
+  "description": "Bilatu eta instalatu skillak ahotsez, denda batetik edo gehiagotatik; pantailak bakoitza bere ikonoarekin eta esan diezaiokezunarekin erakusten du.",
+  "examples": [
+    "Bilatu eguraldirako skill bat",
+    "Instalatu txisteen skilla",
+    "Gomendatu skill batzuk"
+  ],
+  "icon": "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png",
+  "tags": [
+    "store",
+    "skills",
+    "install",
+    "emkay"
+  ]
+}

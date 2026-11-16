@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-store.emkay-voice",
+  "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "name": "Skillwinkel",
+  "description": "Skills zoeken en installeren met je stem, uit een of meer skillwinkels; het scherm toont elke met icoon en wat je ertegen kunt zeggen.",
+  "examples": [
+    "Zoek een skill voor het weer",
+    "Installeer de grappen-skill",
+    "Raad me wat skills aan"
+  ],
+  "icon": "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png",
+  "tags": [
+    "store",
+    "skills",
+    "install",
+    "emkay"
+  ]
+}
