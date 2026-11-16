@@ -52,11 +52,13 @@ class Skill:
 
 
 def _from_emkay(r: dict, store: str):
-    if r.get("kind") != "skill" or r.get("status") not in ("works", "untested"):
-        return None              # plugins, what ships already, what does not work
+    # what ships with Emkay ("builtin") stays in, so a search can say you
+    # have it already; plugins and what does not work are left out
+    if r.get("kind") != "skill" or r.get("status") not in ("works", "untested", "builtin"):
+        return None
     return Skill(package=r["package"], texts=r.get("texts") or {}, icon=r.get("icon"),
                  category=r.get("category", ""), source=r.get("source", ""),
-                 works=True if r.get("status") == "works" else None, store=store)
+                 works=True if r.get("status") in ("works", "builtin") else None, store=store)
 
 
 def _from_klondike(r: dict, store: str):

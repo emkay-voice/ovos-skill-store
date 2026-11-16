@@ -135,6 +135,7 @@ T = {
 }
 
 ROOT = Path(__file__).parent.parent / "ovos_skill_store" / "locale"
+# already_have_try.dialog is written by hand in every language (see locale/)
 ICON = "https://raw.githubusercontent.com/emkay-voice/ovos-skill-store/main/res/icon.png"
 for lang, t in T.items():
     loc = ROOT / lang

@@ -130,9 +130,15 @@ padding:6px 12px;margin:4px 6px 0 0;font-size:14px}}
         found = [s for _, s in search(self.stores.skills(), query, self.lang, self.search_words())]
         if not found:
             return self.speak_dialog("nothing_found", {"query": query})
-        names = [s.text(self.lang)["name"] for s in found]
         self.cards(found, query)
-        self.speak_dialog("found", {"count": len(found), "list": self.join(names)})
+        new = [s for s in found if not installed(s.package)]
+        if not new:   # what matches is here already: say how to use it
+            have = found[0].text(self.lang)
+            if have["examples"]:
+                return self.speak_dialog("already_have_try", {"name": have["name"], "example": have["examples"][0]})
+            return self.speak_dialog("already_installed", {"name": have["name"]})
+        names = [s.text(self.lang)["name"] for s in new]
+        self.speak_dialog("found", {"count": len(new), "list": self.join(names)})
 
     @intent_handler("recommend.intent")
     def handle_recommend(self, message: Message):

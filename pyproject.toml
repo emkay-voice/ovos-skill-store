@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ovos-skill-store"
-version = "0.1.0a1"
+version = "0.1.0a2"
 description = "OpenVoiceOS skill: find and install skills by voice from one or more skill stores, with their icons and example phrases on the screen"
 readme = "README.md"
 license = {text = "Apache-2.0"}

@@ -34,6 +34,8 @@ KLONDIKE = [
 def test_parse_both_formats():
     got = {s.package for s in stores.parse(EMKAY, "Emkay") + stores.parse(KLONDIKE, "Klondike")}
     assert got == {"ovos-skill-weather", "ovos-skill-joke", "ovos-skill-laugh"}
+    shipped = [{**EMKAY[0], "package": "ovos-skill-date-time", "status": "builtin"}]
+    assert stores.parse(shipped, "Emkay")[0].works  # kept, to say you have it
 
 
 def test_text_in_the_language_else_english():
@@ -123,6 +125,12 @@ def test_every_language_has_everything(lang):
         assert (loc / f"{intent}.intent").read_text(encoding="utf-8").strip(), intent
     for d in ("found", "nothing_found", "recommend", "recommend_title", "nothing_to_recommend", "not_found",
               "already_installed", "confirm_install", "not_installing", "installing", "install_failed",
-              "installed", "installed_try", "badge_works", "badge_installed", "and"):
+              "installed", "installed_try", "badge_works", "badge_installed", "and", "already_have_try"):
         assert (loc / f"{d}.dialog").read_text(encoding="utf-8").strip(), d
     assert isinstance(stores.load_words(loc / "search_words.json"), dict)
+
+
+def test_what_you_have_already(skill, monkeypatch):
+    monkeypatch.setattr(pkg, "installed", lambda p: p == "ovos-skill-weather")
+    skill.handle_search(Message("x", {"query": "weather"}))
+    assert "already" in said(skill) and "What's the weather like?" in said(skill)
