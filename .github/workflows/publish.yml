@@ -1,5 +1,8 @@
 # Build the wheel and run the tests on every push; publish it to PyPI when a
-# version tag is pushed (vX.Y.Z, matching `version` in pyproject.toml).
+# version tag is pushed (vX.Y.Z, matching `version` in pyproject.toml), and
+# make a GitHub release for the tag with the wheel attached. Alpha/beta/rc
+# tags (v0.1.0a2) become pre-releases. Klondike only lists a skill as
+# "Looks Complete" when it has both a PyPI release and a GitHub release.
 # Publishing uses PyPI's trusted publishing (no token): the PyPI project must
 # name this repo, this workflow and the "pypi" environment as its publisher.
 name: Build and publish
@@ -52,3 +55,24 @@ jobs:
           name: dist
           path: dist
       - uses: pypa/gh-action-pypi-publish@release/v1
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - name: GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          pre=""
+          if [[ "$TAG" =~ (a|b|rc)[0-9]+$ ]]; then pre="--prerelease"; fi
+          gh release create "$TAG" dist/* --repo "$GITHUB_REPOSITORY" \
+            --title "$TAG" --generate-notes --verify-tag $pre
