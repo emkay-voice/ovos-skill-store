@@ -1,6 +1,10 @@
 {
   "skill_id": "ovos-skill-store.emkay-voice",
   "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "package_name": "ovos-skill-store",
+  "pip_spec": "ovos-skill-store",
+  "license": "Apache-2.0",
+  "author": "emkay-voice",
   "name": "Tenda de skills",
   "description": "Atopa e instala skills coa voz, dende unha ou varias tendas; a pantalla amosa cada unha coa súa icona e o que lle podes dicir.",
   "examples": [

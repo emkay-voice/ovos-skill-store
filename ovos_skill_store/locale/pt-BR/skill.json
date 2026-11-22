@@ -1,6 +1,10 @@
 {
   "skill_id": "ovos-skill-store.emkay-voice",
   "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "package_name": "ovos-skill-store",
+  "pip_spec": "ovos-skill-store",
+  "license": "Apache-2.0",
+  "author": "emkay-voice",
   "name": "Loja de skills",
   "description": "Encontre e instale skills com a voz, de uma ou mais lojas; a tela mostra cada uma com seu ícone e o que você pode dizer a ela.",
   "examples": [

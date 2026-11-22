@@ -1,6 +1,10 @@
 {
   "skill_id": "ovos-skill-store.emkay-voice",
   "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "package_name": "ovos-skill-store",
+  "pip_spec": "ovos-skill-store",
+  "license": "Apache-2.0",
+  "author": "emkay-voice",
   "name": "Skillwinkel",
   "description": "Skills zoeken en installeren met je stem, uit een of meer skillwinkels; het scherm toont elke met icoon en wat je ertegen kunt zeggen.",
   "examples": [

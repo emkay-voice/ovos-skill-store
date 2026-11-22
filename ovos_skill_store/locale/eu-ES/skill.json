@@ -1,6 +1,10 @@
 {
   "skill_id": "ovos-skill-store.emkay-voice",
   "source": "https://github.com/emkay-voice/ovos-skill-store",
+  "package_name": "ovos-skill-store",
+  "pip_spec": "ovos-skill-store",
+  "license": "Apache-2.0",
+  "author": "emkay-voice",
   "name": "Skill denda",
   "description": "Bilatu eta instalatu skillak ahotsez, denda batetik edo gehiagotatik; pantailak bakoitza bere ikonoarekin eta esan diezaiokezunarekin erakusten du.",
   "examples": [
