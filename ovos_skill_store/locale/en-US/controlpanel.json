@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Stores",
+ "settings.stores": "Store addresses",
+ "settings.stores.hint": "Separate them with commas. The first is searched first."
+}

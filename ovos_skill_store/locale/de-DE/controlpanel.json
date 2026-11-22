@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Stores",
+ "settings.stores": "Adressen der Stores",
+ "settings.stores.hint": "Mit Kommas trennen. Der erste wird zuerst durchsucht."
+}

@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Butikker",
+ "settings.stores": "Butikkernes adresser",
+ "settings.stores.hint": "Adskil dem med komma. Den første søges først."
+}

@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Tendas",
+ "settings.stores": "Enderezos das tendas",
+ "settings.stores.hint": "Sepáraos con comas. O primeiro búscase primeiro."
+}
