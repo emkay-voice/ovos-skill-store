@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Winkels",
+ "settings.stores": "Adressen van de winkels",
+ "settings.stores.hint": "Scheid ze met komma's. De eerste wordt het eerst doorzocht."
+}

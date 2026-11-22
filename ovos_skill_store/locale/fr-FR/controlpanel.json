@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Boutiques",
+ "settings.stores": "Adresses des boutiques",
+ "settings.stores.hint": "Séparez-les par des virgules. La première est cherchée d'abord."
+}

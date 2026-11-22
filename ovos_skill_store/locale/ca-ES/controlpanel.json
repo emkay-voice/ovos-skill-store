@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Botigues",
+ "settings.stores": "Adreces de les botigues",
+ "settings.stores.hint": "Separeu-les amb comes. La primera es cerca primer."
+}

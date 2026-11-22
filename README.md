@@ -55,6 +55,9 @@ store's record. A store that cannot be reached leaves the others.
 Installing needs ovos-core's installer with pip allowed
 (`skills.installer.allow_pip`), as for the control panel.
 
+The setting has a form on the Skills page of the [control panel](https://github.com/OpenVoiceOS/ovos-control-panel), in the languages the
+skill speaks (`settingsmeta.json`, with its texts in `locale/<lang>/controlpanel.json`).
+
 ## License
 
 Apache-2.0

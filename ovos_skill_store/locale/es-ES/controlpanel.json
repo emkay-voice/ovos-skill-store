@@ -1,0 +1,5 @@
+{
+ "settings.section.Stores": "Tiendas",
+ "settings.stores": "Direcciones de las tiendas",
+ "settings.stores.hint": "Sepárelas con comas. La primera se busca primero."
+}
